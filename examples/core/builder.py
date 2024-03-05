@@ -19,7 +19,7 @@ from pyutils.optimizer import SAM, RAdam
 from pyutils.typing import DataLoader, Optimizer, Scheduler
 from torch.types import Device
 
-from core.models import *
+from examples.core.models import *
 
 __all__ = [
     "make_dataloader",
