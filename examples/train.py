@@ -31,7 +31,7 @@ from pyutils.torch_train import (
 from pyutils.typing import Criterion, DataLoader, Optimizer, Scheduler
 from pyutils.config import configs
 from pyutils.optimizer import SAM
-from core import builder
+from examples.core import builder
 
 
 def train_one_epoch(
