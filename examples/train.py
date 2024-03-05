@@ -33,7 +33,8 @@ from pyutils.config import configs
 from pyutils.optimizer import SAM
 from examples.core import builder
 
-checkpoint = "/content/checkpoint"
+savedir = "/content/savedir"
+os.makedirs(savedir, exist_ok=True)
 
 def train_one_epoch(
     model: nn.Module,
@@ -209,7 +210,7 @@ def main() -> None:
                 save_model=False,
                 print_msg=True,
             )
-            model_save_path = os.path.join(checkpoint, f"model_epoch_{epoch}.pth")
+            model_save_path = os.path.join(savedir, f"model_epoch_{epoch}.pth")
             torch.save(model.state_dict(), model_save_path)
             lg.info(f"Model saved to {model_save_path}")
 
