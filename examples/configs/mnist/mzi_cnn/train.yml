@@ -20,7 +20,7 @@ scheduler:
 
 run:
   experiment: mnist_cnn_train
-  n_epochs: 200
+  n_epochs: 11
   batch_size: 32
 
 quantize:
